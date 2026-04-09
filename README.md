@@ -1,17 +1,24 @@
-# React + Vite
+# Future Project
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 핵심 아이디어
+프로젝트를 통해 구현하고 싶은 핵심 기능이나 개선점들을 미리 적어둡니다.
+- [ ] UI/UX 개선: 좀 더 보기 편한 웹으로 만들기
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 기술 스택 🔨
+- Frontend : jsx, react
+---
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 작성자: 김우현 (katarinablu-u)
+- Major: Software (Class of '23)
+- Activity: Likelion 14th (Frontend Track)
+- Interests: 
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# likelion14-week3" 
+## 실행 방법 (나중에 작성)
+- 메모할 내용 작성하기
+- 삭제하고 싶은 내용 삭제 버튼 누르기
