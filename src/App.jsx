@@ -1,22 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
+import MemoInsert from "./MemoInsert";
+import MemoList from "./MemoList";
 
-function App() {
-  const [text, setText] = useState("");
+export default function App() {
+  const [memos, setMemos] = useState([]);
 
-  function handleChange(e){
-    setText(e.target.value);
-  }
+  const addMemo = (text) => {
+    const newMemo = {
+      id: Date.now(),
+      text,
+    };
+    setMemos([newMemo, ...memos]); // 위에 추가
+  };
 
-  function handleClick(){
-    alert(text);
-  }
+  const deleteMemo = (id) => {
+    setMemos(memos.filter((memo) => memo.id !== id));
+  };
 
   return (
-    <div>
-      <input type="text" onChange={handleChange} />
-      <button onClick={handleClick}>확인</button>
+    <div className="container">
+      <h1>MemoList</h1>
+      <MemoInsert onAdd={addMemo} />
+      <MemoList memos={memos} onDelete={deleteMemo} />
     </div>
   );
 }
-
-export default App;
