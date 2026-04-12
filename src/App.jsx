@@ -6,22 +6,31 @@ export default function App() {
   const [memos, setMemos] = useState([]);
 
   const addMemo = (text) => {
-    const newMemo = {
-      id: Date.now(),
-      text,
-    };
-    setMemos([newMemo, ...memos]); // 위에 추가
+    setMemos([{ text }, ...memos]); // id 제거
   };
 
-  const deleteMemo = (id) => {
-    setMemos(memos.filter((memo) => memo.id !== id));
+  const deleteMemo = (index) => {
+    setMemos(memos.filter((_, i) => i !== index));
   };
 
   return (
-    <div className="container">
-      <h1>MemoList</h1>
+    <Container>
+      <Title>MemoList</Title>
       <MemoInsert onAdd={addMemo} />
       <MemoList memos={memos} onDelete={deleteMemo} />
-    </div>
+    </Container>
   );
 }
+
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 400px;
+  margin: 100px auto;
+  padding: 40px 20px;
+  background-color: #f4f4e6;
+  border-radius: 20px;
+  text-align: center;
+`;
+
+const Title = styled.h1``;
